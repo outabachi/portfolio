@@ -15,7 +15,7 @@
         <div class="navigation">
             <ul>
                 <li class="liste active">
-                    <a href="#">
+                    <a onclick="scrollToElement1()">
                         <span class="icon">
                             <span class="material-symbols-outlined">
                                 home
@@ -25,7 +25,7 @@
                     </a>
                 </li>
                 <li class="liste">
-                    <a href="#">
+                    <a onclick="scrollToElement2()">
                         <span class="icon">
                             <span class="material-symbols-outlined">
                                 psychology_alt
@@ -35,7 +35,7 @@
                     </a>
                 </li>
                 <li class="liste">
-                    <a href="#">
+                    <a onclick="scrollToElement3()">
                         <span class="icon">
                             <span class="material-symbols-outlined">
                                 work
@@ -45,7 +45,7 @@
                     </a>
                 </li>
                 <li class="liste">
-                    <a href="#">
+                    <a onclick="scrollToElement4()">
                         <span class="icon">
                             <span class="material-symbols-outlined">
                                 contact_page
@@ -59,18 +59,33 @@
         </div>
 
     </div>
-    <section class="accueil">
+    <section id="accueil">
         <div class="banner">
             <div class="text-banner">
                 <p id="p-text-banner"></p>
             </div>
-            <div class="portrait-banner">
-                <img src="./assets/416082825_285924520799259_1841229859578444335_n-fotor-ai-art-effects-20240713220759.jpg"
-                    alt="" srcset="">
-            </div>
         </div>
     </section>
-    <section class="mes projets">
+    <section id="qui-suis-je">
+        <p>
+            Bonjour et bienvenue sur mon portfolio ! Je m'appelle Mohamed Outabachi, j'ai 30 ans et je suis
+            pédicure-podologue de profession.<br>
+            Bien que ma carrière ait débuté dans le domaine de la santé, j'ai toujours eu une passion pour le
+            développement web et la technologie. Pour concrétiser cette passion, j'ai suivi la formation Developpeur Web
+            chez OpenClassrooms.<br>
+            Ce parcours m'a permis de me plonger profondément dans le monde du développement web et d'acquérir des
+            compétences solides.<br>
+            Grâce à cette formation et à une pratique rigoureuse, je maîtrise désormais la conception et le
+            développement de sites web complets et interactifs.<br>
+            Voici un aperçu de mes compétences :<br><br>
+
+            HTML & CSS : Création de structures de pages web bien organisées et stylisées.<br>
+            JavaScript : Dynamisation des sites web avec des interactions utilisateur avancées.<br>
+            React : Développement d'applications web réactives et performantes.<br>
+            Node.js : Mise en place de serveurs et de backends robustes pour des applications web complètes.<br>
+        </p>
+    </section>
+    <section id="mes-projets">
         <div class="carousel">
             <div class="list">
                 <div class="item">
@@ -80,10 +95,14 @@
                             Booki
                         </div>
                         <div class="topic">
+                            integration d'une maquette figma d'un site Internet qui permette aux usagers de trouver des
+                            hébergements et des activités dans la ville de leur choix.
+                            Apprendre JavaScript et comprendre les concepts de base, maîtriser les selecteurs, Flexbox
+                            etc..
                             Projet fait uniquement en HTML et CSS
                         </div>
                         <button class="seeMore">
-                            Voir le projet
+                            <a href="https://github.com/outabachi/booki" target="_blank">Voir le projet</a>
                         </button>
                     </div>
                 </div>
@@ -95,9 +114,12 @@
                         </div>
                         <div class="topic">
                             Projet fait en HTML et CSS et JS
+                            Apprendre JavaScript et comprendre les concepts de base, maîtriser les structures de
+                            contrôle et les fonctions, ainsi que la manipulation du DOM.
                         </div>
                         <button class="seeMore">
-                            Voir le projet
+                            <a href="https://github.com/outabachi/Portfolio-architecte-sophie-bluel-main"
+                                target="_blank">Voir le projet</a>
                         </button>
                     </div>
                 </div>
@@ -108,10 +130,12 @@
                             Kasa
                         </div>
                         <div class="topic">
-                            Projet fait en REACT
+                            Projet fait en React, Sass
+                            Apprentissage de React avec la compréhension des composants, leur cycle de vie et la gestion
+                            d'état pour créer des applications dynamiques et performantes.
                         </div>
                         <button class="seeMore">
-                            Voir le projet
+                            <a href="https://github.com/outabachi/kasa" target="_blank">Voir le projet</a>
                         </button>
                     </div>
                 </div>
@@ -122,19 +146,26 @@
                             Mon vieux grimoire
                         </div>
                         <div class="topic">
-                            Projet fait en nodes
+                            Projet fait en Node.js, Express, MongoDB, React, API
+                            La mise en place des routes, la gestion des requêtes et des réponses, ainsi que la sécurité
+                            et l'optimisation des performances de l'API.
                         </div>
                         <button class="seeMore">
-                            Voir le projet
+                            <a href="https://github.com/outabachi/Mon-vieux-grimoire" target="_blank">Voir le projet</a>
                         </button>
                     </div>
                 </div>
             </div>
             <div class="arrows">
-                <button id="prev"><</button>
-                <button id="next">></button>
+                <button id="prev">
+                    <</button>
+                        <button id="next">></button>
             </div>
         </div>
+    </section>
+    <section id="contact">
+        <p>Vous avez un projet en tête ou souhaitez en savoir plus sur mon parcours ?<br>
+            N'hésitez pas à me contacter par mail à outabachi-mohamed@hotmail.fr !</p>
     </section>
     <script src="index.js"></script>
 </body>

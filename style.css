@@ -8,7 +8,7 @@
 }
 
 :root {
-    --clr: #04229c;
+    --clr: #222327;
     --clr2: #6eff8b;
 }
 
@@ -21,6 +21,24 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 35px;
+    position: fixed;
+    z-index: 10000;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    width: 100vw;
+
+}
+
+.navbar::before {
+    content: "";
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: -50px;
+    left: 0;
 }
 
 .navigation {
@@ -46,6 +64,7 @@ body {
     list-style: none;
     width: 11.25vw;
     z-index: 1;
+    cursor: pointer;
 }
 
 .navigation ul li a {
@@ -82,6 +101,7 @@ body {
 .navigation ul li.active a .texte {
     opacity: 1;
     transform: translateY(10px);
+
 }
 
 .indicator {
@@ -92,8 +112,71 @@ body {
     width: 80px;
     height: 80px;
     background-color: var(--clr2);
-    border: 6px solid var(--clr);
+    border: 6px solid black;
     transition: 0.5s;
+}
+
+@media (max-width: 1560px) {
+    .indicator {
+        left: 11%;
+    }
+}
+
+@media (max-width: 1350px) {
+    .indicator {
+        left: 10%;
+    }
+}
+
+@media (max-width: 1060px) {
+    .indicator {
+        left: 9%;
+    }
+}
+
+@media (max-width: 900px) {
+    .indicator {
+        left: 8%;
+    }
+}
+
+@media (max-width: 700px) {
+    .indicator {
+        left: 6%;
+    }
+}
+
+@media (max-width: 600px) {
+    .indicator {
+        left: 4%;
+    }
+    .navigation ul li.active a .texte {
+      
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 500px) {
+    .indicator {
+        left: 3%;
+        width: 70px;
+        height: 70px;
+    }
+    .navigation ul li.active a .texte {
+      
+        font-size: x-small;
+    }
+}
+@media (max-width: 400px) {
+    .indicator {
+        left: 1%;
+        width: 58px;
+        height: 58px;
+    }
+    .navigation ul li.active a .texte {
+      
+        font-size: x-small;
+    }
 }
 
 .indicator::before {
@@ -105,7 +188,7 @@ body {
     height: 20px;
     background: transparent;
     border-top-right-radius: 20px;
-    box-shadow: 0px -10px 0 0 var(--clr);
+    box-shadow: 0px -10px 0 0 black;
 
 }
 
@@ -118,7 +201,7 @@ body {
     height: 20px;
     background: transparent;
     border-top-left-radius: 20px;
-    box-shadow: 0px -10px 0 0 var(--clr);
+    box-shadow: 0px -10px 0 0 black;
 
 }
 
@@ -145,13 +228,16 @@ body {
 }
 
 .text-banner {
-    width: 48vw;
-    height: calc(100vh - 200px);
+    width: 50vw;
+    height: 80vh;
     margin-left: 50px;
     display: flex;
     justify-content: center;
-    text-align: left;
+    text-align: center;
     align-items: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding-top: 100px;
 }
 
 .text-banner p {
@@ -159,34 +245,41 @@ body {
     font-size: 44px;
     line-height: 1.3;
 }
-
-
-.portrait-banner img {
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-    position: absolute;
-    left: 60vw;
-    top: 0;
-    animation: moveUpDown 7s infinite;
+@media (max-height: 600px) {
+    .text-banner p {
+        font-size: 35px;     
+    }
+}
+@media (max-height: 540px) {
+    .text-banner p {
+        font-size: 25px;     
+    }
 }
 
-@keyframes moveUpDown {
-    0% {
-        top: 200px;
-    }
 
-    50% {
-        top: 30vh;
-    }
+#qui-suis-je {
+    margin-right: 50px;
+    margin-left: 50px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
-    100% {
-        top: 200px;
-    }
+#qui-suis-je p {
+    color: var(--clr2);
+    font-size: large;
+    text-align: left;
+    
+}
+
+#mes-projets {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .carousel {
-    height: 800px;
+    height: 700px;
     overflow: hidden;
     position: relative;
 }
@@ -223,9 +316,27 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 400px;
+    width: 300px;
     opacity: 0;
     pointer-events: none;
+}
+@media (max-height: 1000px) {
+    .carousel .list .item .intro {
+        width: 200px;
+
+    }
+}
+@media (max-height: 600px) {
+    .carousel .list .item .intro {
+        width: 100px;
+
+    }
+}
+@media (max-height: 500px) {
+    .carousel .list .item .intro {
+        width: 20px;
+
+    }
 }
 
 .carousel .list .item:nth-child(2) .intro {
@@ -293,12 +404,21 @@ body {
 }
 
 .carousel .list .item .intro .title {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 500;
+}
+@media (max-width: 500px) {
+    .carousel .list .item .intro .title {
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+    .carousel .list .item .intro .topic {
+        font-size: 0.1em;
+    }
 }
 
 .carousel .list .item .intro .topic {
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .carousel .list .item .intro .seeMore {
@@ -377,19 +497,36 @@ body {
         opacity: 1;
     }
 }
-.carousel.prev .list .item:nth-child(2){
+
+.carousel.prev .list .item:nth-child(2) {
     animation: positionItem1 0.5s ease-in-out 1 forwards;
 
 }
-@keyframes positionItem1{
-    from{
+
+@keyframes positionItem1 {
+    from {
         transform: translate(-100%, -5%) scale(1.5);
-    filter: blur(30px);
-    z-index: 11;
-    opacity: 0;
+        filter: blur(30px);
+        z-index: 11;
+        opacity: 0;
     }
 }
-.carousel.prev .list .item:nth-child(3){
+
+.carousel.prev .list .item:nth-child(3) {
     animation: positionItem2 0.7s ease-in-out 1 forwards;
 
+}
+
+#contact {
+    border-top: 2px solid white;
+    background-color: black;
+
+}
+
+#contact p {
+    color: var(--clr2);
+    font-size: large;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
